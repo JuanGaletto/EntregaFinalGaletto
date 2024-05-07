@@ -1,0 +1,29 @@
+.category--list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 15px;
+    padding-right: 20px;
+}
+
+.category--list li{
+    background-color: #9b9797;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category--list li:hover{
+    background-color: #e1e1e1;
+}
+
+.category--list li a{
+    text-decoration: none;
+    color: rgb(18, 83, 18);
+    font-weight: 500;
+
+}
+
+.active-link{
+    background-color: #e1e1e1;
+}
