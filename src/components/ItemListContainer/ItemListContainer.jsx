@@ -1,16 +1,25 @@
+import React, { useEffect, useState } from 'react';
 import ItemList from "../ItemList/ItemList";
 import useProducts from "../../hooks/useProducts";
-import useProduct from "../../hooks/useProduct";
 
-function ItemListContainer({ saludo }) {
+function ItemListContainer({ saludo, category }) {
   const { isLoading: productsLoading, products } = useProducts();
-  const { product, isLoading: porduct4Loading } = useProduct(4);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  useEffect(() => {
+    if (category) {
+      setFilteredProducts(products.filter(product => product.category === category));
+    } else {
+      setFilteredProducts(products);
+    }
+  }, [category, products]);
+
   if (productsLoading) return <h1>Cargando...</h1>;
 
   return (
     <div>
       <h1>{saludo}</h1>
-      <ItemList products={products} />
+      <ItemList products={filteredProducts} />
     </div>
   );
 }

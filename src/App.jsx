@@ -12,7 +12,7 @@ function App() {
         <Route path="/tenis" element={<h1>Articulos de Tenis</h1>} />
         <Route path="/hockey" element={<h1>Articulos de Hockey</h1>} />
         <Route path="/basket" element={<h1>Articulos de BasketBall</h1>} />
-        <Route path="*" element={<h1>Not Found</h1>} />
+        
 
       </Routes>
       <ItemListContainer saludo={"Bienvenidos!!"} />
