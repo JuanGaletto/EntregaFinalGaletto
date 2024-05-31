@@ -23,3 +23,4 @@ export default function ItemCount({ stock, count, increment, decrement }) {
     </div>
   );
 }
+

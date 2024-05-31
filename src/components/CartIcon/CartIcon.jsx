@@ -9,4 +9,5 @@ function CartIcon({ ancho, alto }) {
   );
 }
 
+
 export default CartIcon;
